@@ -2,32 +2,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.doranco</groupId>
 	<artifactId>jaxws-wsdl-server</artifactId>
+	<packaging>jar</packaging>
 	<version>1.0</version>
+	<properties>
+		<maven.compiler.verion>3.8.1</maven.compiler.verion>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.27</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
-		<dependency>
-			<groupId>com.sun.faces</groupId>
-			<artifactId>jsf-api</artifactId>
-			<version>2.2.20</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.glassfish/javax.faces -->
-		<dependency>
-			<groupId>org.glassfish</groupId>
-			<artifactId>javax.faces</artifactId>
-			<version>2.2.20</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
@@ -63,13 +50,14 @@
 
 	</dependencies>
 	<build>
-	<sourceDirectory>src/main/java</sourceDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>${maven.compiler.verion}</version>
 				<configuration>
-					<release>17</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 		</plugins>
